@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="vue-app">
     <Header />
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
@@ -9,13 +9,17 @@
 import Header from './components/layout/Header';
 
 export default {
-  name:"app",
+  name: 'vue-app',
   components: {
-    Header
-  }
-}
+    Header,
+  },
+  data() {
+    return {
+      attribute: 'example property',
+    };
+  },
+};
 </script>
-
 
 <style>
 #app {
